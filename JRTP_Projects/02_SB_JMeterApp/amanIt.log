@@ -1,0 +1,108 @@
+2024-12-14 12:36:10,434 [main] INFO  in.ashokit.Application                             - Starting Application using Java 21.0.4 with PID 8416 (C:\Users\Aman\Documents\JRTP_Projects\02_SB_JMeterApp\target\classes started by Aman in C:\Users\Aman\Documents\JRTP_Projects\02_SB_JMeterApp)
+2024-12-14 12:36:10,465 [main] INFO  in.ashokit.Application                             - No active profile set, falling back to 1 default profile: "default"
+2024-12-14 12:36:13,089 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port 9090 (http)
+2024-12-14 12:36:13,126 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-9090"]
+2024-12-14 12:36:13,131 [main] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2024-12-14 12:36:13,132 [main] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-14 12:36:13,305 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2024-12-14 12:36:13,306 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 2695 ms
+2024-12-14 12:36:14,260 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-9090"]
+2024-12-14 12:36:14,317 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port 9090 (http) with context path '/'
+2024-12-14 12:36:14,338 [main] INFO  in.ashokit.Application                             - Started Application in 5.088 seconds (process running for 9.067)
+2024-12-14 12:36:14,346 [main] INFO  in.ashokit.rest.WelcomeRestController              - ***********welcomeMsg() - started*************
+2024-12-14 12:36:14,346 [main] INFO  in.ashokit.rest.WelcomeRestController              - ***********welcomeMsg() - ended*************
+2024-12-14 12:37:10,052 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-12-14 12:37:10,060 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.b.w.embedded.tomcat.GracefulShutdown           - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-14 12:37:10,064 [tomcat-shutdown] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-9090"]
+2024-12-14 12:37:10,081 [tomcat-shutdown] INFO  o.s.b.w.embedded.tomcat.GracefulShutdown           - Graceful shutdown complete
+2024-12-14 12:37:10,083 [RMI TCP Connection(3)-127.0.0.1] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-9090"]
+2024-12-14 12:38:44,675 [main] INFO  in.ashokit.Application                             - Starting Application using Java 21.0.4 with PID 4268 (C:\Users\Aman\Documents\JRTP_Projects\02_SB_JMeterApp\target\classes started by Aman in C:\Users\Aman\Documents\JRTP_Projects\02_SB_JMeterApp)
+2024-12-14 12:38:44,679 [main] INFO  in.ashokit.Application                             - No active profile set, falling back to 1 default profile: "default"
+2024-12-14 12:38:47,159 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port 9090 (http)
+2024-12-14 12:38:47,192 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-9090"]
+2024-12-14 12:38:47,197 [main] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2024-12-14 12:38:47,198 [main] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-14 12:38:47,343 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2024-12-14 12:38:47,344 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 2541 ms
+2024-12-14 12:38:48,358 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-9090"]
+2024-12-14 12:38:48,452 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port 9090 (http) with context path '/'
+2024-12-14 12:38:48,493 [main] INFO  in.ashokit.Application                             - Started Application in 4.927 seconds (process running for 7.712)
+2024-12-14 12:38:48,502 [main] INFO  in.ashokit.rest.WelcomeRestController              - ***********welcomeMsg() - started*************
+2024-12-14 12:38:48,503 [main] INFO  in.ashokit.rest.WelcomeRestController              - ***********welcomeMsg() - ended*************
+2024-12-14 12:39:18,871 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-12-14 12:39:18,876 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.w.embedded.tomcat.GracefulShutdown           - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-14 12:39:18,878 [tomcat-shutdown] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-9090"]
+2024-12-14 12:39:18,891 [tomcat-shutdown] INFO  o.s.b.w.embedded.tomcat.GracefulShutdown           - Graceful shutdown complete
+2024-12-14 12:39:18,893 [RMI TCP Connection(4)-127.0.0.1] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-9090"]
+2024-12-14 12:49:32,983 [main] INFO  in.ashokit.Application                             - Starting Application using Java 21.0.4 with PID 2752 (C:\Users\Aman\Documents\JRTP_Projects\02_SB_JMeterApp\target\classes started by Aman in C:\Users\Aman\Documents\JRTP_Projects\02_SB_JMeterApp)
+2024-12-14 12:49:32,987 [main] INFO  in.ashokit.Application                             - No active profile set, falling back to 1 default profile: "default"
+2024-12-14 12:49:35,381 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port 9090 (http)
+2024-12-14 12:49:35,413 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-9090"]
+2024-12-14 12:49:35,419 [main] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2024-12-14 12:49:35,420 [main] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-14 12:49:35,564 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2024-12-14 12:49:35,565 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 2452 ms
+2024-12-14 12:49:36,515 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-9090"]
+2024-12-14 12:49:36,568 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port 9090 (http) with context path '/'
+2024-12-14 12:49:36,587 [main] INFO  in.ashokit.Application                             - Started Application in 4.724 seconds (process running for 7.512)
+2024-12-14 12:49:36,595 [main] INFO  in.ashokit.rest.WelcomeRestController              - ***********welcomeMsg() - started*************
+2024-12-14 12:49:36,595 [main] INFO  in.ashokit.rest.WelcomeRestController              - ***********welcomeMsg() - ended*************
+2024-12-14 13:17:48,502 [RMI TCP Connection(30)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-12-14 13:17:48,508 [RMI TCP Connection(30)-127.0.0.1] INFO  o.s.b.w.embedded.tomcat.GracefulShutdown           - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-14 13:17:48,511 [tomcat-shutdown] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-9090"]
+2024-12-14 13:17:48,525 [tomcat-shutdown] INFO  o.s.b.w.embedded.tomcat.GracefulShutdown           - Graceful shutdown complete
+2024-12-14 13:17:48,526 [RMI TCP Connection(30)-127.0.0.1] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-9090"]
+2024-12-14 13:45:55,722 [main] INFO  in.ashokit.Application                             - Starting Application using Java 21.0.4 with PID 13400 (C:\Users\Aman\Documents\JRTP_Projects\02_SB_JMeterApp\target\classes started by Aman in C:\Users\Aman\Documents\JRTP_Projects\02_SB_JMeterApp)
+2024-12-14 13:45:55,726 [main] INFO  in.ashokit.Application                             - No active profile set, falling back to 1 default profile: "default"
+2024-12-14 13:45:58,240 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port 9090 (http)
+2024-12-14 13:45:58,276 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-9090"]
+2024-12-14 13:45:58,290 [main] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2024-12-14 13:45:58,291 [main] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-14 13:45:58,562 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2024-12-14 13:45:58,564 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 2704 ms
+2024-12-14 13:45:59,591 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-9090"]
+2024-12-14 13:45:59,674 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port 9090 (http) with context path '/'
+2024-12-14 13:45:59,703 [main] INFO  in.ashokit.Application                             - Started Application in 5.06 seconds (process running for 7.911)
+2024-12-14 13:45:59,714 [main] INFO  in.ashokit.rest.WelcomeRestController              - ***********welcomeMsg() - started*************
+2024-12-14 13:45:59,715 [main] INFO  in.ashokit.rest.WelcomeRestController              - ***********welcomeMsg() - ended*************
+2024-12-14 13:47:17,197 [RMI TCP Connection(5)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-12-14 13:47:17,202 [RMI TCP Connection(5)-127.0.0.1] INFO  o.s.b.w.embedded.tomcat.GracefulShutdown           - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-14 13:47:17,204 [tomcat-shutdown] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-9090"]
+2024-12-14 13:47:17,217 [tomcat-shutdown] INFO  o.s.b.w.embedded.tomcat.GracefulShutdown           - Graceful shutdown complete
+2024-12-14 13:47:17,219 [RMI TCP Connection(5)-127.0.0.1] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-9090"]
+2024-12-14 13:48:17,349 [main] INFO  in.ashokit.Application                             - Starting Application using Java 21.0.4 with PID 13736 (C:\Users\Aman\Documents\JRTP_Projects\02_SB_JMeterApp\target\classes started by Aman in C:\Users\Aman\Documents\JRTP_Projects\02_SB_JMeterApp)
+2024-12-14 13:48:17,353 [main] INFO  in.ashokit.Application                             - No active profile set, falling back to 1 default profile: "default"
+2024-12-14 13:48:19,842 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port 9090 (http)
+2024-12-14 13:48:19,885 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-9090"]
+2024-12-14 13:48:19,891 [main] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2024-12-14 13:48:19,892 [main] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-14 13:48:20,063 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2024-12-14 13:48:20,063 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 2579 ms
+2024-12-14 13:48:21,347 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-9090"]
+2024-12-14 13:48:21,412 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port 9090 (http) with context path '/'
+2024-12-14 13:48:21,433 [main] INFO  in.ashokit.Application                             - Started Application in 5.194 seconds (process running for 7.999)
+2024-12-14 13:48:21,441 [main] INFO  in.ashokit.rest.WelcomeRestController              - ***********welcomeMsg() - started*************
+2024-12-14 13:48:21,442 [main] INFO  in.ashokit.rest.WelcomeRestController              - ***********welcomeMsg() - ended*************
+2024-12-14 13:48:48,051 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-12-14 13:48:48,056 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.w.embedded.tomcat.GracefulShutdown           - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-14 13:48:48,059 [tomcat-shutdown] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-9090"]
+2024-12-14 13:48:48,072 [tomcat-shutdown] INFO  o.s.b.w.embedded.tomcat.GracefulShutdown           - Graceful shutdown complete
+2024-12-14 13:48:48,073 [RMI TCP Connection(4)-127.0.0.1] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-9090"]
+2024-12-14 13:49:38,775 [main] INFO  in.ashokit.Application                             - Starting Application using Java 21.0.4 with PID 11400 (C:\Users\Aman\Documents\JRTP_Projects\02_SB_JMeterApp\target\classes started by Aman in C:\Users\Aman\Documents\JRTP_Projects\02_SB_JMeterApp)
+2024-12-14 13:49:38,780 [main] INFO  in.ashokit.Application                             - No active profile set, falling back to 1 default profile: "default"
+2024-12-14 13:49:41,329 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port 9090 (http)
+2024-12-14 13:49:41,364 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-9090"]
+2024-12-14 13:49:41,369 [main] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2024-12-14 13:49:41,370 [main] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-14 13:49:41,517 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2024-12-14 13:49:41,518 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 2584 ms
+2024-12-14 13:49:42,466 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-9090"]
+2024-12-14 13:49:42,522 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port 9090 (http) with context path '/'
+2024-12-14 13:49:42,542 [main] INFO  in.ashokit.Application                             - Started Application in 4.87 seconds (process running for 7.723)
+2024-12-14 13:49:42,549 [main] INFO  in.ashokit.rest.WelcomeRestController              - ***********welcomeMsg() - started*************
+2024-12-14 13:49:42,550 [main] INFO  in.ashokit.rest.WelcomeRestController              - ***********welcomeMsg() - ended*************
+2024-12-14 13:51:37,819 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-12-14 13:51:37,824 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.w.embedded.tomcat.GracefulShutdown           - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-14 13:51:37,826 [tomcat-shutdown] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-9090"]
+2024-12-14 13:51:37,839 [tomcat-shutdown] INFO  o.s.b.w.embedded.tomcat.GracefulShutdown           - Graceful shutdown complete
+2024-12-14 13:51:37,841 [RMI TCP Connection(4)-127.0.0.1] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-9090"]

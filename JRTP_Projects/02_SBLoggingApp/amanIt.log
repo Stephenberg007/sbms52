@@ -1,0 +1,12 @@
+2024-12-28 16:42:15,004 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [in.ashokit.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-28 16:42:15,557 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper        - Found @SpringBootConfiguration in.ashokit.Application for test class in.ashokit.ApplicationTests
+2024-12-28 16:42:17,097 [main] INFO  in.ashokit.ApplicationTests                        - Starting ApplicationTests using Java 21.0.4 with PID 13544 (started by Aman in C:\Users\Aman\Documents\JRTP_Projects\02_SBLoggingApp)
+2024-12-28 16:42:17,099 [main] INFO  in.ashokit.ApplicationTests                        - No active profile set, falling back to 1 default profile: "default"
+2024-12-28 16:42:19,181 [main] INFO  in.ashokit.ApplicationTests                        - Started ApplicationTests in 3.052 seconds (process running for 8.357)
+2024-12-28 16:55:53,614 [main] INFO  in.ashokit.Application                             - Starting Application using Java 21.0.4 with PID 16744 (C:\Users\Aman\Documents\JRTP_Projects\02_SBLoggingApp\target\classes started by Aman in C:\Users\Aman\Documents\JRTP_Projects\02_SBLoggingApp)
+2024-12-28 16:55:53,618 [main] INFO  in.ashokit.Application                             - No active profile set, falling back to 1 default profile: "default"
+2024-12-28 16:55:55,027 [main] INFO  in.ashokit.Application                             - Started Application in 2.445 seconds (process running for 5.784)
+2024-12-28 16:55:55,036 [main] INFO  in.ashokit.service.UserService                     - info msg: logic starts
+2024-12-28 16:55:55,037 [main] WARN  in.ashokit.service.UserService                     - *Warning messages
+2024-12-28 16:55:55,037 [main] ERROR in.ashokit.service.UserService                     - Error Message starts**
+2024-12-28 16:55:55,037 [main] INFO  in.ashokit.service.UserService                     - info msg: logic Ends

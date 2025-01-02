@@ -1,0 +1,15 @@
+package in.ashokit.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="Student_tbl")
+public class Student {
+	@Id
+	private int sid;
+	
+	private String name;
+	private String city;
+
+}

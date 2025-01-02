@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;12_Jpa_h2_database-1/src/main/java/in.ashokit&apos;&#x0D;&#x0A;- Original project: &apos;11_Jpa_GeneratorExample&apos;&#x0D;&#x0A;- Destination element: &apos;12_Jpa_h2_database-1/src/main/java/in.ashokit&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     11_Jpa_GeneratorExample/src/main/java/in.ashokit.service&#x0D;&#x0A;     11_Jpa_GeneratorExample/src/main/java/in.ashokit.repository" description="Copy packages" destination="=12_Jpa_h2_database-1/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ashokit" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ashokit.service" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ashokit.repository" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1733250354757" version="1.0"/>
+</session>

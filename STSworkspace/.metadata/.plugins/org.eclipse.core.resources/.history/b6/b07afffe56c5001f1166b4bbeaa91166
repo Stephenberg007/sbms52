@@ -1,0 +1,44 @@
+package in.ashokit.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import jakarta.mail.internet.MimeMessage;
+
+@RestController
+public class EmailController {
+    @Autowired
+    private JavaMailSender mailSender;
+
+    @GetMapping("/sendEmail")
+    @ResponseBody
+    public String sendEmail() throws Exception {
+    	/* SimpleMailMessage message = new SimpleMailMessage();
+         message.setTo("meena510821@gmail.com");
+         message.setSubject("Test Email");
+         message.setText( "Hi Mother, \n How are u doing?\n I hope all is well.");  		
+         
+         message.setFrom("krmauryaaman@gmail.com");
+
+         mailSender.send(message);
+         return "message Sent";*/
+    	
+    	MimeMessage msg = mailSender.createMimeMessage();
+    	MimeMessageHelper helper = new MimeMessageHelper(msg);
+    	
+    	helper.setTo("meena510821@gmail.com");
+    	helper.setSubject("Test Email");
+    	helper.setText("<h1>Hi There</h1>,<br><h2> /n I am sending attachments</h2>",true);
+    	  ClassPathResource image1 = new ClassPathResource("Angular_Installation.png");
+    	helper.addAttachment("Angular_Installation.png",image1);
+    	ClassPathResource image1 = new ClassPathResource("AngularComponents.png");
+    	helper.addAttachment("AngularComponents.png",image1);
+    	 mailSender.send(msg);
+    	return "Email sent Successfully";
+    }
+}

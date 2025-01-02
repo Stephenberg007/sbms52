@@ -1,0 +1,10 @@
+package in.ashokit.service;
+
+import in.ashokit.binding.Student;
+
+public interface StudentService {
+	public String upsert(Student student);
+	public Student findStudentById(Integer id);
+	public boolean deleteById(Integer id);
+
+}

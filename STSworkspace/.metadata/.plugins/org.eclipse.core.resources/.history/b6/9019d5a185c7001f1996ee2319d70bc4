@@ -1,0 +1,37 @@
+package in.ashokit.controller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import in.ashokit.binding.Student;
+import in.ashokit.service.StudentService;
+
+@RestController
+public class StudentRestController {
+	@Autowired
+	private StudentService stuServ;
+	
+	@PostMapping("/upsert")
+	public ResponseEntity<String> addRecord(@RequestBody Student student) {
+		String status = stuServ.upsert(student);
+		return new ResponseEntity<String>(status,HttpStatus.CREATED);
+		
+	}
+	
+	public ResponseEntity<Student> findStudent(@PathVariable Integer sid){
+		Student studentById = stuServ.findStudentById(sid);
+		String status;
+		if(studentById != null) {
+			status= "Record Retrieved";
+		}else {
+			status ="Record do not exist";
+		}
+		return new ResponseEntity<Student>()
+	}
+	
+
+}

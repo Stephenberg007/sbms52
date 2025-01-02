@@ -1,0 +1,31 @@
+package in.ashokit.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class EmailController {
+    @Autowired
+    private JavaMailSender mailSender;
+   
+
+    @GetMapping("/sendEmail")
+    @ResponseBody
+    public String sendEmail() throws Exception {
+    	SimpleMailMessage message = new SimpleMailMessage();
+         message.setTo("rk_mrt@rediffmail.com");
+         message.setSubject("Test Email");
+         message.setText( "Hi Mama Ji, \n How are u doing?\n I hope all is well. \n Happy New Year \n Regards, \n Aman");  		
+         
+         message.setFrom("krmauryaaman@gmail.com");
+
+         mailSender.send(message);
+         return "message Sent";
+    	
+    	
+    }
+}

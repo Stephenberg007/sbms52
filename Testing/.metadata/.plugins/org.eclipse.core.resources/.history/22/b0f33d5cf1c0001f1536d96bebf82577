@@ -1,0 +1,5 @@
+package com.mak.repo;
+
+public interface AnujRepo {
+
+}

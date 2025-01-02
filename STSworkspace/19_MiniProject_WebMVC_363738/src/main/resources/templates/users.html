@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Page</title>
+</head>
+<body>
+	<h2>View All Users Here</h2>
+	<a href="/form111">+Add New User</a>
+	<p th:text="${sMsg}"></p>
+		<p th:text="${errMsg}"></p>
+	
+	<table border="1">
+		<thead>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Phone</th>
+			<th>Email</th>
+			<th>Action</th>
+		</thead>
+		<tbody>
+		<tr th:each="user :${alllllUsers}">
+			<td th:text="${user.uid}"></td>
+			<td th:text="${user.name}"></td>
+			<td th:text="${user.phone}"></td>
+			<td th:text="${user.email}"></td>
+			<td><a th:href="@{/edit(uid=${user.uid})}">Edit</a>
+			  <a th:href="@{/delete(uid=${user.uid})}">Delete</a>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+package in.ashokit.controller;
+
+@RestController
+public class StudentRestController {
+
+}

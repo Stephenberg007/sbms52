@@ -1,0 +1,4 @@
+spring.application.name=001_Practice_JPA
+spring.datasource.url=com.sql.cj.jdbc.Driver
+spring.datasource.username=root
+spring.datasource.password=aman@12345

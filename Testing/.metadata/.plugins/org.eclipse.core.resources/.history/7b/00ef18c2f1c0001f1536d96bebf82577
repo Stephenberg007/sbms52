@@ -1,0 +1,28 @@
+package com.mak.service;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mak.entity.Anuj;
+import com.mak.entity.Kanishk;
+import com.mak.repo.AnujRepo;
+
+@Service
+public class AnujService {
+@Autowired
+private AnujRepo objRepo;
+
+public void setData() {
+	Anuj s1 = new Anuj(203,"aman","Krmauryaaman@gmail.com","Dehradun");
+	Anuj s2 = new Anuj(202,"Anuj","Amanuj98@gmail.com","Meerut");
+	Anuj s3 = new Anuj(201,"Ankit","Ankitj98@gmail.com","OakLand");
+	
+	List<Anuj> list= Arrays.asList(s1,s2,s3);
+	List<Anuj> saveAll = objRepo.saveAll(list);
+	System.out.println(saveAll);
+}
+	
+}

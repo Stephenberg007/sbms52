@@ -1,0 +1,9 @@
+package in.ashokit.bindings;
+
+public class CounsellorDTO {
+	private String name;
+	private String email;
+	private String pwd;
+	private Long phNo;
+
+}

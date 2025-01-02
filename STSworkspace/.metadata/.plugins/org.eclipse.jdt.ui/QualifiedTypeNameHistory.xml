@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.boot.ApplicationRunner"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.PageRequest"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="com.jtc.generator.OrderIdGenerator"/>
+    <fullyQualifiedTypeName name="in.ashokit.Entity.Contact"/>
+    <fullyQualifiedTypeName name="in.ashokit.entity.Person"/>
+    <fullyQualifiedTypeName name="jakarta.transaction.Transactional"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder"/>
+    <fullyQualifiedTypeName name="in.ashokit.primary.repository.UserRepository"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="in.ashokit.service.PersonPassportService"/>
+    <fullyQualifiedTypeName name="in.ashokit.entity.User"/>
+    <fullyQualifiedTypeName name="jakarta.validation.constraints.NotEmpty"/>
+    <fullyQualifiedTypeName name="jakarta.validation.constraints.Email"/>
+    <fullyQualifiedTypeName name="jakarta.validation.constraints.NotNull"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="in.ashokit.model.User"/>
+    <fullyQualifiedTypeName name="jakarta.annotation.Resource"/>
+    <fullyQualifiedTypeName name="org.springframework.core.io.Resource"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="in.ashokit.binding.Customer"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+</qualifiedTypeNameHistroy>

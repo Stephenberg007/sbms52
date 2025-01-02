@@ -1,0 +1,13 @@
+package in.ashokit.rest;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MsgRestController {
+	@GetMapping("\first"){
+		public String getMsg() {
+			return "Welcome To REST APIs";
+		}
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;001_Practice_JPA&apos; to &apos;001_Practice_JPA_PkeyGenerator&apos;&#x0D;&#x0A;- Original element: &apos;001_Practice_JPA&apos;&#x0D;&#x0A;- Renamed element: &apos;001_Practice_JPA&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;001_Practice_JPA&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=001_Practice_JPA" name="001_Practice_JPA_PkeyGenerator" references="true" stamp="1733297973718" version="1.0"/>
+</session>

@@ -1,0 +1,14 @@
+2024-12-14 13:53:20,708 [main] INFO  in.ashokit.Application                             - Starting Application using Java 21.0.4 with PID 2520 (C:\Users\Aman\Documents\JRTP_Projects\02_SBLoggingApp\target\classes started by Aman in C:\Users\Aman\Documents\JRTP_Projects\02_SBLoggingApp)
+2024-12-14 13:53:20,712 [main] INFO  in.ashokit.Application                             - No active profile set, falling back to 1 default profile: "default"
+2024-12-14 13:53:22,190 [main] INFO  in.ashokit.Application                             - Started Application in 2.542 seconds (process running for 5.352)
+2024-12-14 13:53:22,200 [main] INFO  in.ashokit.service.UserService                     - info msg: logic starts
+2024-12-14 13:53:22,201 [main] WARN  in.ashokit.service.UserService                     - *Warning messages
+2024-12-14 13:53:22,201 [main] ERROR in.ashokit.service.UserService                     - Error Message starts**
+2024-12-14 13:53:22,201 [main] INFO  in.ashokit.service.UserService                     - info msg: logic Ends
+2024-12-14 13:54:12,738 [main] INFO  in.ashokit.Application                             - Starting Application using Java 21.0.4 with PID 14320 (C:\Users\Aman\Documents\JRTP_Projects\02_SBLoggingApp\target\classes started by Aman in C:\Users\Aman\Documents\JRTP_Projects\02_SBLoggingApp)
+2024-12-14 13:54:12,743 [main] INFO  in.ashokit.Application                             - No active profile set, falling back to 1 default profile: "default"
+2024-12-14 13:54:14,224 [main] INFO  in.ashokit.Application                             - Started Application in 2.731 seconds (process running for 5.606)
+2024-12-14 13:54:14,234 [main] INFO  in.ashokit.service.UserService                     - info msg: logic starts
+2024-12-14 13:54:14,234 [main] WARN  in.ashokit.service.UserService                     - *Warning messages
+2024-12-14 13:54:14,234 [main] ERROR in.ashokit.service.UserService                     - Error Message starts**
+2024-12-14 13:54:14,234 [main] INFO  in.ashokit.service.UserService                     - info msg: logic Ends
