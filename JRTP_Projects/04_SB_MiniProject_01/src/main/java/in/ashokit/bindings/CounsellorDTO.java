@@ -7,7 +7,7 @@ public class CounsellorDTO {
 	private Integer counsellorId;
 	private String name;
 	private String email;
-	private String pwd;
+	private String password;
 	private Long phNo;
 
 }

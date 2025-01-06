@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -20,14 +21,21 @@ public class StudentRestController {
 	@Autowired
 	private StudentService stuServ;
 	
-	@PostMapping("/course")
+	@PostMapping(
+			value= "/course",
+			consumes = {"application/json","application/xml"},
+			produces = "text/plain"
+			
+			)
 	public ResponseEntity<String> addRecord(@RequestBody Student student) {
 		String status = stuServ.upsert(student);
 		return new ResponseEntity<String>(status,HttpStatus.CREATED);
 		
 	}
 	
-	@GetMapping("/student/{sid}")
+	@GetMapping(value="/studento/{sid}"
+				
+			)
 	public ResponseEntity<Student> findStudent(@PathVariable Integer sid){
 		Student studnt = stuServ.findStudentById(sid);
 		/*String status;
@@ -52,10 +60,22 @@ public class StudentRestController {
 		
 		
 	}
-	@PutMapping("/student")
-	public ResponseEntity<String> updateRecord(@RequestBody Student student) {
-		String status = stuServ.upsert(student);
-		return new ResponseEntity<String>(status,HttpStatus.OK);
+	@PatchMapping(value = "/student",
+			consumes = {"application/json","application/xml"},
+			produces={"application/xml","application/json"}
+			)
+	public ResponseEntity<Student> updateRecord(@RequestBody Student student) {
+		String status = stuServ.upsert(student);// havent used it bcoz i wanted to send and save an object
+		return new ResponseEntity<Student>(student,HttpStatus.CREATED);
+		
+	}
+	@PutMapping(value = "/student",
+			consumes = {"application/json","application/xml"},
+			produces={"application/xml","application/json"}
+			)
+	public ResponseEntity<Student> updateAllRecord(@RequestBody Student student) {
+		String status = stuServ.upsert(student);// havent used it bcoz i wanted to send and save an object
+		return new ResponseEntity<Student>(student,HttpStatus.CREATED);
 		
 	}
 	

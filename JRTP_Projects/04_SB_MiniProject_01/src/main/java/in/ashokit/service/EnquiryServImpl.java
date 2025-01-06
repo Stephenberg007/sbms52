@@ -1,6 +1,5 @@
 package in.ashokit.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -8,6 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
+import org.springframework.stereotype.Service;
 
 import in.ashokit.bindings.DashboardDTO;
 import in.ashokit.bindings.EnqFilterDTO;
@@ -18,6 +18,7 @@ import in.ashokit.repo.CounsellorRepo;
 import in.ashokit.repo.EnquiryRepo;
 import jakarta.persistence.EntityNotFoundException;
 
+@Service
 public class EnquiryServImpl implements EnquiryService{
 	@Autowired
 	EnquiryRepo eRepo;
@@ -26,31 +27,31 @@ public class EnquiryServImpl implements EnquiryService{
 
 	@Override
 	public DashboardDTO getDashboardInfo(Integer counsellorId) {
-		List<Enquiry> enqList = eRepo.findByCounsellorCid(counsellorId);
+		List<Enquiry> enqList = eRepo.findByCounsellorCounsellorId(counsellorId);
 			DashboardDTO dto = new DashboardDTO();
 			//dto.setTotalEnqCnt(enqList.size());
 			
 		int openCnt = enqList.stream()
-							.filter(enq->enq.getEnqStatus().equals("OPEN"))
+							.filter(enq->enq.getEnqStatus().equalsIgnoreCase("OPEN"))
 							.collect(Collectors.toList())
 							.size();	
 		//dto.setOpenEnqCnt(openCnt);
 		
 		int enrolledCnt = enqList.stream()
-				.filter(enq->enq.getEnqStatus().equals("ENROLLED"))
+				.filter(enq->enq.getEnqStatus().equalsIgnoreCase("ENROLLED"))
 				.collect(Collectors.toList())
 				.size();	
 			//dto.setEnrollefEnqCnt(enrolledCnt);
 			
 			int lostEnqCnt = enqList.stream()
-					.filter(enq->enq.getEnqStatus().equals("LOST"))
+					.filter(enq->enq.getEnqStatus().equalsIgnoreCase("LOST"))
 					.collect(Collectors.toList())
 					.size();	
 				//dto.setLostEnqCnt(lostEnqCnt);
 
 				dto.setTotalEnqCnt(enqList.size());
 				dto.setOpenEnqCnt(openCnt);
-				dto.setEnrollefEnqCnt(enrolledCnt);
+				dto.setEnrolledEnqCnt(enrolledCnt);
 				dto.setLostEnqCnt(lostEnqCnt);
 		return dto;
 	}
@@ -68,7 +69,7 @@ public class EnquiryServImpl implements EnquiryService{
 	        // Map DTO to Entity
 	        Enquiry enquiry = new Enquiry();
 	        BeanUtils.copyProperties(enquiryDto, enquiry); // Ensure properties match
-	        enquiry.setCounsellor(counsellor);
+	        enquiry.setCounsellor(counsellor);//associating that particular counsellor who logged in, with this enquiry RECORD
 
 	        // Save the enquiry
 	        eRepo.save(enquiry);
@@ -93,7 +94,7 @@ public class EnquiryServImpl implements EnquiryService{
 			BeanUtils.copyProperties(enquiry, dto);
 			allEnqDtos.add(dto);
 		}*/
-		List<Enquiry> allEnquiry = eRepo.findByCounsellorCid(counsellorId);
+		List<Enquiry> allEnquiry = eRepo.findByCounsellorCounsellorId(counsellorId);
 		 List<EnquiryDTO> allEnqDtos = allEnquiry.stream()
 				 							.map(enquiry -> {
 				 							EnquiryDTO dto = new EnquiryDTO();
@@ -115,6 +116,10 @@ public class EnquiryServImpl implements EnquiryService{
 			enquiry.setCourse(filterDto.getCourse());
 		if(filterDto.getEnqStatus() !=null && !filterDto.getEnqStatus().equals(""))
 			enquiry.setEnqStatus(filterDto.getEnqStatus());
+		
+		Counsellor counsellor =new Counsellor();
+		counsellor.setCounsellorId(counsellorId);
+		enquiry.setCounsellor(counsellor); 
 		
 		Example<Enquiry> example = Example.of(enquiry);
 		List<Enquiry> allEnqs = eRepo.findAll(example);

@@ -17,7 +17,7 @@ public class CounsellorServiceImpl implements CounsellorService {
 
 	@Override
 	public CounsellorDTO login(CounsellorDTO counsellorDTO) {
-		Counsellor entity = cRepo.findByEmailAndPassword(counsellorDTO.getEmail(), counsellorDTO.getPwd());
+		Counsellor entity = cRepo.findByEmailAndPassword(counsellorDTO.getEmail(), counsellorDTO.getPassword());
 		// But returnType=CounsellorDTO I need to convert it
 		if(entity != null) {
 		CounsellorDTO cDTO = new CounsellorDTO();
@@ -35,7 +35,7 @@ public class CounsellorServiceImpl implements CounsellorService {
 			Counsellor entity = new Counsellor();
 			BeanUtils.copyProperties(counsellorDTO, entity);
 			Counsellor savedRecord = cRepo.save(entity);
-			return savedRecord.getCid() != null;
+			return savedRecord.getCounsellorId() != null;
 			
 		
 		

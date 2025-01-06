@@ -1,8 +1,0 @@
-package in.ashokit.service;
-
-import in.ashokit.entity.Counsellor;
-
-public interface CounsellorService {
-	boolean addRecord(Counsellor counsellor);
-
-}

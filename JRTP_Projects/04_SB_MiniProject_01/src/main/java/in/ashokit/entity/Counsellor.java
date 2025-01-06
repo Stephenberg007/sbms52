@@ -21,7 +21,7 @@ public class Counsellor {
 	
 @Id
 @GeneratedValue(strategy=GenerationType.IDENTITY)
-private Integer cid;
+private Integer counsellorId;
 private String name;
 private String email;
 private String password;

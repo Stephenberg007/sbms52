@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MMT-Book Tickets</title>
+
+</head>
+
+<body>
+	<div class="container">
+		<h1>Book Ticket </h1>
+		<font style="color:greenyellow;">
+			<p th:text="${sMsg}"></p>
+		</font>
+		<font style="color:red;">
+			<p th:text="${errMsg}" class="error"></p>
+		</font>
+		<form th:action="@{/book}" th:object="${passenger}" method="post">
+			<table>
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" th:field="*{name}" required="true" /></td>
+
+				</tr>
+
+				<tr>
+					<td>Email:</td>
+					<td><input type="email" th:field="*{email}" required="true" /></td>
+
+				</tr>
+				<tr>
+					<td>From :</td>
+					<td><input type="text" th:field="*{source}" required="true" /></td>
+
+				</tr>
+				<tr>
+					<td>To:</td>
+					<td><input type="text" th:field="*{destination}" required="true" /></td>
+
+				</tr>
+				<tr>
+					<td>Train Number:</td>
+					<td><input type="text" th:field="*{trainNum}" required="true" /></td>
+
+				</tr>
+				<tr>
+					<td>DOJ: </td>
+					<td><input type="text" th:field="*{doj}" required="true" /></td>
+
+				</tr>
+				<tr>
+					<td>Gender:</td>
+					<td><input type="text" th:field="*{gender}" required="true" /></td>
+
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Book" class="btn btn-primary" /></td>
+				</tr>
+			</table>
+
+
+		</form>
+	</div>
+	<a href="/ticket-view">View Tickets</a>
+
+</body>
+
+</html>
