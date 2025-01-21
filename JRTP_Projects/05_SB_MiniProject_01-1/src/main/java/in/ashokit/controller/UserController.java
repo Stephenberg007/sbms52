@@ -37,7 +37,8 @@ public class UserController {
 	@PostMapping("/login")
 	public String userLogin( @ModelAttribute("userRegObj") UserRegistrationDTO userRegDto,
 			Model model) {
-			UserRegistrationDTO user = userImpl.login(userRegDto);
+			//UserRegistrationDTO user = userImpl.login(userRegDto);
+			UserRegistrationDTO user = userImpl.login(userRegDto.getUserEmail(),userRegDto.getUserPwd());
 		if (user != null) {
 			//HttpSession session = req.getSession(true);// not used 
 			String email = user.getUserEmail();
@@ -120,21 +121,32 @@ public class UserController {
 		String oldPassword = resetPwdDto.getOldPassword();
 		String newPassword = resetPwdDto.getNewPassword();
 		String confirmPassword = resetPwdDto.getConfirmPassword();
-		
-		if(!newPassword.equals(confirmPassword)) {
-			model.addAttribute("errMsg","New Password Mismatch");
-		}
-		
-		boolean resetPassword = userImpl.resetPassword(resetPwdDto);
-		
-		if(resetPassword) {
-			model.addAttribute("sMsg","Password Reset.Login Again");
+		UserRegistrationDTO login = userImpl.login(resetPwdDto.getEmail(),resetPwdDto.getOldPassword());
+		if(login !=null) {
+			if(newPassword.equals(confirmPassword)) {
+				boolean resetPwd = userImpl.resetPassword(resetPwdDto);
+				model.addAttribute("sMsg","Password Reset");
+				
+			}else {
+				model.addAttribute("errMsg","New And Confirm Password Don't Match");
+			}
 			
 		}else {
-			model.addAttribute("errMsg","Incorrect Password Entered");
+			model.addAttribute("errMsg","Wrong Credentials Provided.Could Not change PASSWORD ");
 		}
-		return "ResetPwd";
 		
+		/*
+		 * if(!newPassword.equals(confirmPassword)) {
+		 * model.addAttribute("errMsg","New Password Mismatch"); }
+		 * 
+		 * boolean resetPassword = userImpl.resetPassword(resetPwdDto);
+		 * 
+		 * if(resetPassword) { model.addAttribute("sMsg","Password Reset.Login Again");
+		 * 
+		 * }else { model.addAttribute("errMsg","Incorrect Password Entered"); } return
+		 * "ResetPwd";
+		 */
+		return "ResetPwd";
 	}
 	
 	//DashBoard

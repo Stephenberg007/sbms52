@@ -7,8 +7,8 @@ import in.ashokit.binding.ResetPasswordDTO;
 import in.ashokit.binding.UserRegistrationDTO;
 
 public interface UserServ {
-	public UserRegistrationDTO login(UserRegistrationDTO userRegDto);
-	
+	//public UserRegistrationDTO login(UserRegistrationDTO userRegDto);
+	public UserRegistrationDTO login(String email, String password);
 	public boolean registerUser(UserRegistrationDTO userRegDto);
 	public Map<Integer,String> getCountries();
 	public Map<Integer, String> getStates(Integer countryId);

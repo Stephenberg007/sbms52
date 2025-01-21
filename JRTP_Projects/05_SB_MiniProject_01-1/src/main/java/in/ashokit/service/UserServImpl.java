@@ -37,9 +37,9 @@ public class UserServImpl implements UserServ {
 	private CityRepo cityRepo;
 	
 	@Override
-	public UserRegistrationDTO login(UserRegistrationDTO userRegDto) {
+	public UserRegistrationDTO login(String email, String password) {
 		
-		UserEntity user = userRepo.findByUserEmailAndUserPwd(userRegDto.getUserEmail(), userRegDto.getUserPwd());
+		UserEntity user = userRepo.findByUserEmailAndUserPwd(email, password);
 		
 		if(user != null) {
 			//user.setPwdUpdated("No");
@@ -135,16 +135,15 @@ public class UserServImpl implements UserServ {
 							return false;
 							}
 		return true;*/
-		if(user ==null) {
-			return false;
-		}
-		if(!oldPwd.equals(user.getUserPwd())) {//If the passwords do not match, the condition inside the if statement becomes true, 
-												//and the code inside the block (return false;) is executed.
-			return false;
-		}
-		if(!cnfPwd.equals(newPwd)) {
-			return false;
-		}
+			/*
+			 * if(user ==null) { 
+			 * return false; }
+			 *  if(!oldPwd.equals(user.getUserPwd()))
+			 *   {//If
+			 * the passwords do not match, the condition inside the if statement becomes
+			 * true, //and the code inside the block (return false;) is executed. return
+			 * false; } if(!cnfPwd.equals(newPwd)) { return false; }
+			 */
 		// if none of the above if satisfies condition
 		
 		user.setUserPwd(newPwd);
