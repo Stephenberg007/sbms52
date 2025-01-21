@@ -35,4 +35,6 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="in.ashokit.ex.CourseNotFoundException"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
+    <fullyQualifiedTypeName name="in.ashokit.feign.WelcomeFeignClient"/>
 </qualifiedTypeNameHistroy>

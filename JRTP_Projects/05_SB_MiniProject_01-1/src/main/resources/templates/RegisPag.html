@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Location Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Register Here</h1>
+    <font style="color:greenyellow;">
+        <p th:text="${sMsg}"></p>
+    </font>
+    <font style="color:red;">
+        <p th:text="${errMsg}" class="error"></p>
+    </font>
+    <form th:action="@{/registration}" th:object="${regDto}" method="post">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" th:field="*{userName}" required="true" /></td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" th:field="*{userEmail}" required="true" /></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input type="number" th:field="*{userPhNo}" required="true" /></td>
+            </tr>
+
+            <!-- Country Dropdown -->
+            <tr>
+                <td>Country:</td>
+                <td>
+                    <select id="country" th:field="*{countryId}">
+                        <option value="">-Select-</option>
+                        <option th:each="entry : ${countries.entrySet()}" th:value="${entry.key}" th:text="${entry.value}">
+                        </option>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- State Dropdown -->
+            <tr>
+                <td>State:</td>
+                <td>
+                    <select id="state" th:field="*{stateId}" disabled>
+                        <option value="">-Select-</option>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- City Dropdown -->
+            <tr>
+                <td>City:</td>
+                <td>
+                    <select id="city" th:field="*{cityId}" disabled>
+                        <option value="">-Select-</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Sign-Up" class="btn btn-primary" /></td>
+            </tr>
+        </table>
+    </form>
+    <p>Already have an Account? <a href="/">Login Here</a></p>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // Populate State Dropdown on Country Selection
+        $('#country').change(function () {
+            const countryId = $(this).val();
+            if (countryId) {
+                $.ajax({
+                    url: `/states/${countryId}`,
+                    type: 'GET',
+                    success: function (states) {
+                        $('#state').prop('disabled', false).empty().append('<option value="">Select State</option>');
+                        $.each(states, function (key, value) {
+                            $('#state').append(`<option value="${key}">${value}</option>`);
+                        });
+                    }
+                });
+            } else {
+                $('#state').prop('disabled', true).empty().append('<option value="">Select State</option>');
+                $('#city').prop('disabled', true).empty().append('<option value="">Select City</option>');
+            }
+        });
+
+        // Populate City Dropdown on State Selection
+        $('#state').change(function () {
+            const stateId = $(this).val();
+            if (stateId) {
+                $.ajax({
+                    url: `/cities/${stateId}`,
+                    type: 'GET',
+                    success: function (cities) {
+                        $('#city').prop('disabled', false).empty().append('<option value="">Select City</option>');
+                        $.each(cities, function (key, value) {
+                            $('#city').append(`<option value="${key}">${value}</option>`);
+                        });
+                    }
+                });
+            } else {
+                $('#city').prop('disabled', true).empty().append('<option value="">Select City</option>');
+            }
+        });
+    });
+</script>
+</body>
+</html>

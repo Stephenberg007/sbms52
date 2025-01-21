@@ -9,15 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class MsgRestController {
 	
 	@GetMapping(value="/first",
-				produces="text/plain"
+			produces="application/json"
+				
 			)
 		public String getMsg() {
 		
 			return "Welcome To REST APIs";
 		}
-	@GetMapping(value="/greet",produces="text/plain")
+	@GetMapping(value="/greet",produces="application/xml")
 	public ResponseEntity<String> getGreetMsg(){
-			String msg= "Good Morning...!!" ;
+			String msg= "<h1>Good Morning...!!</h1>" ;
 			return new ResponseEntity(msg,HttpStatus.OK);
 		//return new ResponseEntity(msg,HttpStatus.TEMPORARY_REDIRECT);
 	}

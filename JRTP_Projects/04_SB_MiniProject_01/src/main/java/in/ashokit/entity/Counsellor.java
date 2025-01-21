@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-
+//!st thing done by us in project  i.e developing entities based on fields we want to SAVE in DB.+ Mapping
 @Entity
 @Setter
 @Getter

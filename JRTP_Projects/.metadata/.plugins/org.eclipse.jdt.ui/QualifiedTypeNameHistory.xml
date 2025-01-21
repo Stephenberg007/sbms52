@@ -2,12 +2,18 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
     <fullyQualifiedTypeName name="org.slf4j.Logger"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.CascadeType"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.BeanUtils"/>
     <fullyQualifiedTypeName name="org.springframework.data.domain.Example"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="in.ashokit.entity.State"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.CascadeType"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="in.ashokit.entity.CountryEntity"/>
+    <fullyQualifiedTypeName name="in.ashokit.binding.UserRegistrationDTO"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="in.ashokit.binding.ResetPasswordDTO"/>
+    <fullyQualifiedTypeName name="in.ashokit.binding.QuoteDTO"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.BeanUtils"/>
 </qualifiedTypeNameHistroy>

@@ -1,7 +1,0 @@
-package in.ashokit.binding;
-
-public class Student {
-private Integer id;
-private String name;
-private Double price;
-}

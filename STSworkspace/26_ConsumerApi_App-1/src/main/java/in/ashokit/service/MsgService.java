@@ -25,8 +25,8 @@ public class MsgService {
 	// Now I am accessing JSON data from the PROVIDER
 	public void getRandomQuote() {
 		String providerUrl = "https://dummyjson.com/quotes/random";
-		//ResponseEntity<String> forEntity = rt.getForEntity(apiUrl, String.class);
-		ResponseEntity<Quote> forEntity = rt.getForEntity(providerUrl, Quote.class);// conversion of Json into a JAVA Object
+		ResponseEntity<String> forEntity = rt.getForEntity( providerUrl, String.class);
+		//ResponseEntity<Quote> forEntity = rt.getForEntity(providerUrl, Quote.class);// conversion of Json into a JAVA Object
 		System.out.println("Resonse Code : "+forEntity.getStatusCode().value());
 		System.out.println("Response Body :- "+forEntity.getBody());
 	}

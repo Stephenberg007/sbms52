@@ -33,8 +33,9 @@ public class StudentRestController {
 		
 	}
 	
-	@GetMapping(value="/studento/{sid}"
-				
+	@GetMapping(value="/studento/{sid}",
+			produces={"application/xml","application/json"}
+			
 			)
 	public ResponseEntity<Student> findStudent(@PathVariable Integer sid){
 		Student studnt = stuServ.findStudentById(sid);

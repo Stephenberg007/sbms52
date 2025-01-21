@@ -57,7 +57,7 @@ public class EnquiryController {
 	private String editEnquiry(@RequestParam("enquiry_id") Integer enqId,Model model) {
 		
 		EnquiryDTO enqDto = enqServImp.getEnquiryById(enqId);
-		model.addAttribute("enquiry",enqDto);
+		model.addAttribute("enquiry",enqDto);//I used the same attribute i.e "enquiry" which i used earlier to map with add-enquiry PAGE
 		return "add-enquiry";
 	}
 	@PostMapping("/view-filtered")

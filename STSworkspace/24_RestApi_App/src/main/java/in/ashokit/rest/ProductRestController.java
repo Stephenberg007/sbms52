@@ -17,14 +17,15 @@ import in.ashokit.bindings.Product;
 @RestController
 public class ProductRestController {
 	
-	@GetMapping(value= "/product", produces="application/json")
+	@GetMapping(value= "/product", produces="application/xml")//----To handle XML responses, you need to add 
+	//@GetMapping(value= "/product", produces="application/json")//the Jackson Dataformat-XML dependency to your pom.xml file.
 	public ResponseEntity<Product> getProduct(){
 		Product p = new Product(1,"KeyBoard",2225.0);
 		return new ResponseEntity<Product>(p,HttpStatus.OK);
 	}
 	@GetMapping(value= "/producttt/{pid}", produces="application/json")
 	public ResponseEntity<Product> getProducttt(@PathVariable Integer pid){
-		Product p = new Product(pid,"KeyBoard",2225.0);
+		Product p = new Product(pid,"Kd",2225.0);
 		return new ResponseEntity<Product>(p,HttpStatus.OK);
 	}
 	

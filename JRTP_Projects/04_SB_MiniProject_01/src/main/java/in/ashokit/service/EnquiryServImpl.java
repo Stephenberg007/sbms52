@@ -119,7 +119,7 @@ public class EnquiryServImpl implements EnquiryService{
 		
 		Counsellor counsellor =new Counsellor();
 		counsellor.setCounsellorId(counsellorId);
-		enquiry.setCounsellor(counsellor); 
+		enquiry.setCounsellor(counsellor); // In Enquiry class we have counsellor field and Not counsellorid field therefore we did this
 		
 		Example<Enquiry> example = Example.of(enquiry);
 		List<Enquiry> allEnqs = eRepo.findAll(example);
