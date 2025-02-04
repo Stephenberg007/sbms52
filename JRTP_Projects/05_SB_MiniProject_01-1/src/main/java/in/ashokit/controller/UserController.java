@@ -69,7 +69,7 @@ public class UserController {
 		model.addAttribute("regDto", userDto);
 		
 		Map<Integer,String> countriesMap = userImpl.getCountries();	
-		model.addAttribute("countries",countriesMap);
+		model.addAttribute("countries",countriesMap);// we are sending countries MAP also to the UI
 		
 		//countries,states,cities I have used in Template page with entrySet()
 		
@@ -90,17 +90,20 @@ public class UserController {
 
 
 	@PostMapping("/registration")
-	public String registerUser(@ModelAttribute("regDto") UserRegistrationDTO userRegDto, Model model) {
+	public String registerUser( UserRegistrationDTO userRegDto, Model model) {
 		String email = userRegDto.getUserEmail();
 		boolean uniqueEmail = userImpl.uniqueEmailCheck(email);
 		if (uniqueEmail) {
 			boolean registerUser = userImpl.registerUser(userRegDto);
 			emailServ.sendEmailWithRandomPassword(email);
 			model.addAttribute("sMsg", "Registration Done.Please Login...");
+	        model.addAttribute("regDto", new UserRegistrationDTO()); // Reset the form after successful registration
 
 		} else {
 			model.addAttribute("errMsg", "Email already Registered.Please Login..");
+			model.addAttribute("regDto", userRegDto); // Retain user input in case of error in Registration
 		}
+		
 		Map<Integer,String> countriesMap = userImpl.getCountries();	
 		model.addAttribute("countries",countriesMap);
 		return "RegisPag";

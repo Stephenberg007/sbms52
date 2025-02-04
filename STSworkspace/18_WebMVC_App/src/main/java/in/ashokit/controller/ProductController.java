@@ -20,21 +20,27 @@ public class ProductController {
 	}
 	@GetMapping("/comm")
 	@ResponseBody
-	public String interComm(@RequestParam()String name,@RequestParam()String item) {
+	public String interComm(@RequestParam("a")String Jakira,@RequestParam("b")String khana) {
 		
-		return name +" This is best Day "+" "+item+" Would sell today !!!";
+		return Jakira +" This is best Day "+" "+khana+" Would sell today !!!";
 	}
 	@GetMapping("/communicate")
 	public ModelAndView interCommun(@RequestParam("name")String name,@RequestParam("item")String item,ModelAndView mav) {
 	
 		mav.addObject("msg","Hi "+name+" We have some 800 "+item+"to sell .");
-		mav.setViewName("index");j
+		mav.setViewName("index");
 		return mav;
 	}
 	@GetMapping("/{name}/pathV")
 	@ResponseBody
 	public String getPathData(@PathVariable("name")String empName) {
 		return empName+" is my user name.";
+	}
+	
+	@GetMapping("/{name}/pathVar")
+	@ResponseBody
+	public String getData(@PathVariable("")String name) {
+		return name+" what is my USER ID And Pwd.";
 	}
 	
 	

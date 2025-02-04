@@ -14,9 +14,9 @@ public class Application {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctxt = SpringApplication.run(Application.class, args);
 		MsgService msgBean = ctxt.getBean(MsgService.class);
-		//msgBean.getApiResponse();
-		msgBean.getRandomQuote();
-		System.out.println("---------------------------------------------------------");
+		msgBean.getApiResponse();
+		//msgBean.getRandomQuote();
+		System.out.println("---------------------------gggg------------------------------");
 		//msgBean.getAllQuotes();
 		
 	}

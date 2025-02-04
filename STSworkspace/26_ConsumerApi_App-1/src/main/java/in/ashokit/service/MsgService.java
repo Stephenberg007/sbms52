@@ -2,6 +2,7 @@ package in.ashokit.service;
 
 import java.util.List;
 
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -15,8 +16,8 @@ public class MsgService {
 	
 	public void getApiResponse() {
 		
-		String providerUrl = "https://api.restful-api.dev/objects/";
-		
+		//String providerUrl = "http://localhost:8080/loginf";
+		String providerUrl="https://dummyjson.com/quotes/random";
 		ResponseEntity<String> forEntity = rt.getForEntity(providerUrl, String.class);
 		int value = forEntity.getStatusCode().value();
 		String body = forEntity.getBody();
@@ -31,15 +32,15 @@ public class MsgService {
 		System.out.println("Response Body :- "+forEntity.getBody());
 	}
 	
-//	public void getAllQuotes() {
-//		String provUrl = "https://dummyjson.com/quotes";// Now I am getting all quotes from The Url.
-//		ResponseEntity<AllQuotes> allQuotes = rt.getForEntity(provUrl, AllQuotes.class);
-//		List<Quote> quotes=allQuotes.getBody().getQuotes();
-//		quotes.forEach(quote -> {
-//			System.out.println(quote);
-//		});
-//		
-//	}
+	//public void getAllQuotes() {
+		//String provUrl = "https://dummyjson.com/quotes";// Now I am getting all quotes from The Url.
+		//ResponseEntity<AllQuotes> allQuotes = rt.getForEntity(provUrl, AllQuotes.class);
+		//List<Quote> quotes=allQuotes.getBody().getQuotes();
+		//quotes.forEach(quote -> {
+		//	System.out.println(quote);
+	//});
+	
+	//}
 	public List<Quote> getAllQuotes() {//Here I am hitting Provider URL through Consumer
 		String provUrl = "https://dummyjson.com/quotes";// Now I am getting all quotes from The Url.
 		ResponseEntity<AllQuotes> allQuotes = rt.getForEntity(provUrl, AllQuotes.class);

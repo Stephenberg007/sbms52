@@ -13,7 +13,7 @@ public class Application {
 		ConfigurableApplicationContext ctxt = SpringApplication.run(Application.class, args);
 		MsgService msgBean = ctxt.getBean(MsgService.class);
 		//msgBean.getRandomQuote();
-		msgBean.getRandomQuote2();
+		msgBean.getRandomQuote1();
 	}
 	
 

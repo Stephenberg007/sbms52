@@ -30,7 +30,7 @@ public class MsgController {
 		
 		ModelAndView mav = new ModelAndView();
 		//setting response data in k-v
-		mav.addObject("msg","Welcome To Aman Furnitures @Dehradun");
+		mav.addObject("msg","Welcome To Aman Furnitures @ Dehradun,Uttarakhand");
 		//setting view page name
 		mav.setViewName("index");
 		return mav;

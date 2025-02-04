@@ -26,7 +26,7 @@ public class MsgRestController {
 		return msg.length();
 	}
 	
-	@ExceptionHandler(value= Exception.class)
+	@ExceptionHandler(value= Exception.class)	//class level Exception Handler
 	public ResponseEntity<ExInfo> handleException(Exception e) {
 		String message = e.getMessage();
 		ExInfo exInfo= new ExInfo();
@@ -38,5 +38,9 @@ public class MsgRestController {
 	
 	
 	}
+	/*@ExceptionHandler(value=Exception.class)
+	public String handleException(Exception e) {		// its also working, but i am nnot storing it as an o
+		return e.getMessage();
+	}*/
 	
 }

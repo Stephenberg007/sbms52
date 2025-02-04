@@ -1,5 +1,7 @@
 package in.ashokit.controller;
 
+import java.util.Arrays;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +20,7 @@ public class TktController {
 	public String viewTickets(Model model) {
 		 Passenger[] allPassengers = pserv.getAllPassengers();
 		model.addAttribute("passengers",allPassengers);
+		System.out.println(Arrays.toString(allPassengers));// for printing the records on Console
 		return "tickets";
 		
 	}

@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: 01-fetch_property
+salary: 62500
+job:
+  salary: 62500
+  designation: SSE
+aman:
+  meme:
+    login_error: Invalid Credentials
+    register_error: Registration Failed
+    register_success: Registraion successful
+    book_create_error: Book Creation Failed
+    payment_error: Payment Failed
+    payment_error_reason: Card Not Recognised
+server:
+ port: 8081
+app:
+ messages:
+  login_error: Invalid Credentials
+  register: Register_Success
