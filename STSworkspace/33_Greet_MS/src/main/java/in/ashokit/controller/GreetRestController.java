@@ -22,9 +22,9 @@ public class GreetRestController {
 		//return greetmsg + ", "+welcomeMsg;
 		
 		String greetMsg= "Good Evening Aman Sir !!!!!";
-		String welcomeMsg =welcomeFeign.invokeWelcomeMsg();
+		String welcomeMsg =welcomeFeign.invokeWelcomeMsg();// Here I am trying to est. communication with Welcome MS
 		
-		return welcomeMsg+"- "+greetMsg;// InterService communication without specifying the URl
+		return welcomeMsg+" - "+greetMsg;// InterService communication without specifying the URl
 									// FeignClient will get the URL from the EUREKA Server
 		
 	}

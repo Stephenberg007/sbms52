@@ -28,7 +28,7 @@ public class UserRestController {
 				new UsernamePasswordAuthenticationToken(usrDetails.getEmail(),usrDetails.getPwd());
 		
 		
-		Authentication authenticate = authManager.authenticate(token);//Performing Authentication
+		Authentication authenticate = authManager.authenticate(token);//Performing Authentication and an Authentication Object is created.
 		boolean status = authenticate.isAuthenticated();
 		if(status) {
 			// In Real Time We would Generate JWT here and send to client

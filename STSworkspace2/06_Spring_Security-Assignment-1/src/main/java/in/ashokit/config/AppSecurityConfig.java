@@ -3,11 +3,11 @@ package in.ashokit.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -25,13 +25,13 @@ public class AppSecurityConfig {
 	@SneakyThrows
 	public SecurityFilterChain security(HttpSecurity http) {
 		http.authorizeHttpRequests((req)->
-			req.requestMatchers("/register","/login")// So that Anybody can send Login AND Register Request
-											// We can write 4-5 URLs here too ',' lga kar 
-				.permitAll()
+			req.requestMatchers("/register","/login").permitAll()// So that Anybody can send Login AND Register Request
+											// We can write 4-5 URLs here too ',' lga kar
+			
 				.anyRequest()
 				.authenticated());
 		
-		return http.csrf().disable().build();
+		return http.csrf(AbstractHttpConfigurer::disable).build();
 	}
 	
 	
@@ -51,11 +51,12 @@ public class AppSecurityConfig {
 	}
 	
 	@Bean
-	@SneakyThrows// Responsible to do the Validation
+	@SneakyThrows// Responsible to do the Validation using DaoAuthProvider in the background
 	public AuthenticationManager getAuthManager(AuthenticationConfiguration config) {
 		return config.getAuthenticationManager();
 		
 	}
+
 	
 	
 	

@@ -22,7 +22,7 @@ public class StudentRestController {
 	private StudentService stuServ;
 	
 	@PostMapping(
-			value= "/course",
+			value= "/student",
 			consumes = {"application/json","application/xml"},
 			produces = "text/plain"
 			

@@ -69,7 +69,7 @@ public class EnquiryServImpl implements EnquiryService{
 	        // Map DTO to Entity
 	        Enquiry enquiry = new Enquiry();
 	        BeanUtils.copyProperties(enquiryDto, enquiry); // Ensure properties match
-	        enquiry.setCounsellor(counsellor);//associating that particular counsellor who logged in, with this enquiry RECORD
+	        enquiry.setCounsellor(counsellor);//associating that particular counsellor OBJECT who logged in, with this enquiry RECORD
 
 	        // Save the enquiry
 	        eRepo.save(enquiry);
@@ -121,7 +121,7 @@ public class EnquiryServImpl implements EnquiryService{
 		counsellor.setCounsellorId(counsellorId);
 		enquiry.setCounsellor(counsellor); // In Enquiry class we have counsellor field and Not counsellorid field therefore we did this
 		
-		Example<Enquiry> example = Example.of(enquiry);
+		Example<Enquiry> example = Example.of(enquiry);//Practical Example of using Query by Example---INTERVIEW
 		List<Enquiry> allEnqs = eRepo.findAll(example);
 		 List<EnquiryDTO> allEnqDtos = allEnqs.stream()
 					.map(enq -> {
