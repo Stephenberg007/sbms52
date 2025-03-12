@@ -674,3 +674,8 @@
 2024-12-28 12:56:02,343 [Worker-10: Launching 01_SBWebApp (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\sts-4.26.0.RELEASE\plugins\com.google.guava.failureaccess_1.0.2.jar
 2024-12-28 12:56:02,353 [Worker-10: Launching 01_SBWebApp (1)] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\Aman\Documents\Testing\01_SBWebApp":
 2024-12-28 12:56:02,355 [Worker-10: Launching 01_SBWebApp (1)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -Ppom.xml -B -Dstyle.color=always clean package
+2025-03-11 22:42:38,804 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-03-11 22:51:41,343 [Worker-13: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mak:02_AWS_RDS_-1:0.0.1-SNAPSHOT @ C:\Users\Aman\Documents\Testing\02_AWS_RDS_-1\pom.xml.
+2025-03-11 22:52:14,381 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-11 22:52:14,549 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-11 22:52:14,578 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Aman\Documents\Testing\02_AWS_RDS_-1\src\test\resources

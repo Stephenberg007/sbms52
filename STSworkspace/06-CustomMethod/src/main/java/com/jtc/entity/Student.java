@@ -6,7 +6,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Student_Dtls")
+@Table(name="Student_Dtls", indexes = {
+		 @jakarta.persistence.Index(name = "idx_student_gender", columnList = "student_gender")
+})
 public class Student {
 	@Id
 	@Column(name="Student_id")

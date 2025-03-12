@@ -10,7 +10,7 @@ import com.jtc.entity.Student;
 
 
 public interface StudentRepository extends CrudRepository<Student,Integer> {
-//ublic List<Student> findByGender(String gender);
+public List<Student> findByGender(String gender);
 	
 //ublic List<Student> findByRankGreaterThan(Long rank);
 	//Custom Queries

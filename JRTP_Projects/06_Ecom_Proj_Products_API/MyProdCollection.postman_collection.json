@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "47bf7a1f-c3d2-4119-8f2f-ec2b21592c13",
+		"name": "MyProdCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40697731"
+	},
+	"item": [
+		{
+			"name": "Product-API",
+			"item": [
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_ip}}:{{port_no}}/category",
+							"host": [
+								"{{server_ip}}"
+							],
+							"port": "{{port_no}}",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products By CatgId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_ip}}:{{port_no}}/category/1",
+							"host": [
+								"{{server_ip}}"
+							],
+							"port": "{{port_no}}",
+							"path": [
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products By ProdId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_ip}}:{{port_no}}/product/2",
+							"host": [
+								"{{server_ip}}"
+							],
+							"port": "{{port_no}}",
+							"path": [
+								"product",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products By ProdName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_ip}}:{{port_no}}/products/lapt",
+							"host": [
+								"{{server_ip}}"
+							],
+							"port": "{{port_no}}",
+							"path": [
+								"products",
+								"lapt"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

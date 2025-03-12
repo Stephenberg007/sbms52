@@ -176,8 +176,8 @@ You don't need ordering.
 		String providerUrl = "https://dummyjson.com/quotes/random";
 		RestTemplate rt = new RestTemplate();
 		ResponseEntity<QuoteDTO> quote= rt.getForEntity(providerUrl, QuoteDTO.class);
-		QuoteDTO body = quote.getBody();
-		return body;
+		
+		return quote.getBody();
 	}
 
 }

@@ -1,4 +1,4 @@
-package in.ashokit.entity;
+package main.java.in.ashokit.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

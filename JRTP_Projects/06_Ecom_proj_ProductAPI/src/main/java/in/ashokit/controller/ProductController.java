@@ -1,4 +1,4 @@
-package in.ashokit.controller;
+package main.java.in.ashokit.controller;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import in.ashokit.dto.ProductDTO;
-import in.ashokit.service.ProdServImpl;
+import main.java.in.ashokit.dto.ProductDTO;
+import main.java.in.ashokit.service.ProdServImpl;
 
 @RestController
 public class ProductController {

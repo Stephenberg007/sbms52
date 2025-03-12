@@ -15,13 +15,13 @@ public class Application {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctx = SpringApplication.run(Application.class, args);
 		StudentRepository studentRepo = ctx.getBean(StudentRepository.class);
-		//List<Student> maleStudents = studentRepo.findByGender("Male");
-	//	maleStudents.forEach(System.out::println);
+		List<Student> maleStudents = studentRepo.findByGender("Male");
+		maleStudents.forEach(System.out::println);
 	//	System.out.println("Rank Students");
 	//	List<Student> rankStudents = studentRepo.findByRankGreaterThan(1901l);
 	//	rankStudents.forEach(System.out::println);
-	List<Student> allStu = studentRepo.getStudents();
-		allStu.forEach(System.out::println);
+//	List<Student> allStu = studentRepo.getStudents();
+		//allStu.forEach(System.out::println);
 		
 //		int s = studentRepo.deleteStudentsByGender("FeMale");
 //		System.out.println(s);

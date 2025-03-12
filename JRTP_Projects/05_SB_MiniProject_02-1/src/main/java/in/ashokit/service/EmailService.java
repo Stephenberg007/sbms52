@@ -58,7 +58,7 @@ public class EmailService {
         // Send email
         mailSender.send(message);
 
-        System.out.println("Email sent successfully to " + toEmail + " with password: " + randomPassword);
+       // System.out.println("Email sent successfully to " + toEmail + " with password: " + randomPassword);
        
         // saving password in Repo
         

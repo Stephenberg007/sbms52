@@ -1,4 +1,4 @@
-package in.ashokit.dto;
+package main.java.in.ashokit.dto;
 
 public class ProductDTO {
 	private Integer productId;

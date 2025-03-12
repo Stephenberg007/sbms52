@@ -1,4 +1,4 @@
-package in.ashokit.service;
+package main.java.in.ashokit.service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -9,9 +9,12 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import in.ashokit.dto.ProductDTO;
-import in.ashokit.entity.Product;
-import in.ashokit.repo.ProductRepo;
+import main.java.in.ashokit.dto.ProductCategoryDTO;
+import main.java.in.ashokit.dto.ProductDTO;
+import main.java.in.ashokit.entity.Product;
+import main.java.in.ashokit.entity.ProductCategory;
+import main.java.in.ashokit.repo.ProdCatgRepo;
+import main.java.in.ashokit.repo.ProductRepo;
 
 @Service
 public class ProdServImpl implements ProductService{
@@ -19,24 +22,22 @@ public class ProdServImpl implements ProductService{
 	//ProductRepo prodRepo;
 	
 	private final ProductRepo prodRepo;
+	private final ProdCatgRepo catgRepo;
 	
 	@Autowired
-	public ProdServImpl(ProductRepo prodRepo) {
+	public ProdServImpl(ProductRepo prodRepo,ProdCatgRepo catgRepo) {
 		this.prodRepo=prodRepo;
+		this.catgRepo=catgRepo;
 	}
 	
 	
 	@Override
-	public List<ProductDTO> getProductsByCatgId(Integer categoryId) {
-		List<Product> products = prodRepo.findByProdCategoryCategoryId(categoryId);
-		 List<ProductDTO> allProdDtos = products.stream()
-					.map(prod -> {
-					ProductDTO pDto = new ProductDTO();
-						BeanUtils.copyProperties(prod, pDto);
-							return pDto;
-						})
-						.collect(Collectors.toList());
-		return allProdDtos;
+	public List<ProductCategoryDTO> getAllCategories() {
+		     return catgRepo.findAll()
+		    		 		.stream()
+		    		 		.map(ProductCategoryMapper::convertToDto)
+		    		 		.collect(Collectors.toList());
+		    		 
 	}
 
 	@Override

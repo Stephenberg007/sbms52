@@ -1,14 +1,15 @@
 package in.ashokit.entity;
 
-import java.util.List;
+import java.util.Date;
 
-import jakarta.persistence.CascadeType;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
@@ -29,11 +30,20 @@ public class Customer {
 	private String custEmail;
 	
 	private String pwd;
-	private Long phNo;
 	private String pwdUpdated;
+	private Long phNo;
 	
-	@OneToMany(mappedBy="customer" , cascade=CascadeType.ALL)
-	private List<ShippingAddress> address;
+	
+	@Column(name="date_created")
+	@CreationTimestamp
+	private Date dateCreated;
+	
+	@Column(name="last_updated")
+	@UpdateTimestamp
+	private Date lastUpdated;
+	
+	//@OneToMany(mappedBy="customer" , cascade=CascadeType.ALL)
+	//private List<ShippingAddress> address;
 	
 	
 }

@@ -1,10 +1,10 @@
-package in.ashokit.repo;
+package main.java.in.ashokit.repo;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import in.ashokit.entity.Product;
+import main.java.in.ashokit.entity.Product;
 
 public interface ProductRepo extends JpaRepository<Product,Integer> {
 	public List<Product> findByProdCategoryCategoryId(Integer categoryId);

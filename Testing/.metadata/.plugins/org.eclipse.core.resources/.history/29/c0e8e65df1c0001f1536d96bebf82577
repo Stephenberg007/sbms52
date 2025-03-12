@@ -1,5 +1,0 @@
-package com.mak.repo;
-
-public interface AnujRepo extends JpaRepository<Anuj,Integer> {
-
-}

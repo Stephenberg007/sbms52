@@ -2,6 +2,8 @@ package in.ashokit.controller;
 
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,10 +16,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import in.ashokit.binding.QuoteDTO;
 import in.ashokit.binding.ResetPasswordDTO;
 import in.ashokit.binding.UserRegistrationDTO;
+import in.ashokit.constants.AppConstants;
 import in.ashokit.service.EmailService;
 import in.ashokit.service.UserServImpl;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class UserController {
@@ -26,12 +28,12 @@ public class UserController {
 	
 	@Autowired
 	private EmailService emailServ;
-
+	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	@GetMapping("/")
 	public String loginPage(Model model) {
 		UserRegistrationDTO userDto = new UserRegistrationDTO();
 		model.addAttribute("userRegObj", userDto);
-		return "LoginPage";
+		return AppConstants.LOGIN_PAGE;
 	}
 
 	@PostMapping("/login")
@@ -48,7 +50,7 @@ public class UserController {
 				//String email = (String) req.getAttribute("email");
 				resetPwd.setEmail(email);
 				model.addAttribute("reset", resetPwd);
-				return "ResetPwd";
+				return AppConstants.RESET_PWD;
 				
 			} else {
 				QuoteDTO quotation = userImpl.getQuotation();
@@ -56,8 +58,8 @@ public class UserController {
 				return "Dashboard";
 			}
 		} else {
-			model.addAttribute("errMsg", "Username or Password is Invalid");
-			return "LoginPage";
+			model.addAttribute(AppConstants.ERR_MSG, "Username or Password is Invalid");
+			return AppConstants.LOGIN_PAGE;
 		}
 
 	}
@@ -66,7 +68,7 @@ public class UserController {
 	@GetMapping("/register")
 	public String registrationPage(UserRegistrationDTO userRegDto, Model model) {
 		UserRegistrationDTO userDto = new UserRegistrationDTO();
-		model.addAttribute("regDto", userDto);// So using regDto we have done Empty Form Binding
+		model.addAttribute(AppConstants.REG_DTO, userDto);// So using regDto we have done Empty Form Binding
 		
 		Map<Integer,String> countriesMap = userImpl.getCountries();	
 		model.addAttribute("countries",countriesMap);// we are sending countries MAP also to the UI
@@ -94,14 +96,14 @@ public class UserController {
 		String email = userRegDto.getUserEmail();
 		boolean uniqueEmail = userImpl.uniqueEmailCheck(email);
 		if (uniqueEmail) {
-			boolean registerUser = userImpl.registerUser(userRegDto);
+			 userImpl.registerUser(userRegDto);
 			emailServ.sendEmailWithRandomPassword(email);
 			model.addAttribute("sMsg", "Registration Done.Please Login...");
-	        model.addAttribute("regDto", new UserRegistrationDTO()); // Reset the form after successful registration
+	        model.addAttribute(AppConstants.REG_DTO, new UserRegistrationDTO()); // Reset the form after successful registration
 
 		} else {
-			model.addAttribute("errMsg", "Email already Registered.Please Login..");
-			model.addAttribute("regDto", userRegDto); // Retain user input in case of error in Registration
+			model.addAttribute(AppConstants.ERR_MSG, "Email already Registered.Please Login..");
+			model.addAttribute(AppConstants.REG_DTO, userRegDto); // Retain user input in case of error in Registration
 		}
 		
 		Map<Integer,String> countriesMap = userImpl.getCountries();	
@@ -116,7 +118,7 @@ public class UserController {
 		//String email = (String) req.getAttribute("email");
 		//resetPwd.setEmail(email);
 		model.addAttribute("reset", resetPwd);
-		return "ResetPwd";
+		return AppConstants.RESET_PWD;
 	}
 
 	@PostMapping("/resetPassword")
@@ -124,18 +126,18 @@ public class UserController {
 		String oldPassword = resetPwdDto.getOldPassword();
 		String newPassword = resetPwdDto.getNewPassword();
 		String confirmPassword = resetPwdDto.getConfirmPassword();
-		UserRegistrationDTO login = userImpl.login(resetPwdDto.getEmail(),resetPwdDto.getOldPassword());
+		UserRegistrationDTO login = userImpl.login(resetPwdDto.getEmail(),oldPassword);
 		if(login !=null) {
 			if(newPassword.equals(confirmPassword)) {
-				boolean resetPwd = userImpl.resetPassword(resetPwdDto);
+				 userImpl.resetPassword(resetPwdDto);
 				model.addAttribute("sMsg","Password Reset");
 				
 			}else {
-				model.addAttribute("errMsg","New And Confirm Password Don't Match");
+				model.addAttribute(AppConstants.ERR_MSG,"New And Confirm Password Don't Match");
 			}
 			
 		}else {
-			model.addAttribute("errMsg","Wrong Credentials Provided.Could Not change PASSWORD ");
+			model.addAttribute(AppConstants.ERR_MSG,"Wrong Credentials Provided.Could Not change PASSWORD ");
 		}
 		
 		/*
@@ -149,14 +151,14 @@ public class UserController {
 		 * }else { model.addAttribute("errMsg","Incorrect Password Entered"); } return
 		 * "ResetPwd";
 		 */
-		return "ResetPwd";
+		return AppConstants.RESET_PWD;
 	}
 	
 	//DashBoard
 	@GetMapping("/dashboard")
 	public String getQuote(Model model) {
 		QuoteDTO quotation = userImpl.getQuotation();
-		System.out.println(quotation);
+		logger.info("Recieved Quote :{}",quotation);
 		model.addAttribute("quoteObj",quotation);
 		return "Dashboard";
 	}
@@ -169,7 +171,7 @@ public class UserController {
 		UserRegistrationDTO userDto = new UserRegistrationDTO();
 		model.addAttribute("userRegObj", userDto);
 		model.addAttribute("sMsg","Logged Out Successfully");
-		return "LoginPage";
+		return AppConstants.LOGIN_PAGE;
 	}
 	
 
