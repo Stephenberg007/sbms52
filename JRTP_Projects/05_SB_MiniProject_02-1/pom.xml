@@ -31,7 +31,7 @@
 		<java.version>17</java.version>
 		<sonar.host.url>http://13.234.217.54:9000/</sonar.host.url>
 		<sonar.login>sqa_ad2af301e0e3f73852d31932753c3ca7a09ea04a</sonar.login>
-		
+
 	</properties>
 	<dependencies>
 		<dependency>
@@ -82,6 +82,28 @@
 
 	<build>
 		<plugins>
+
+					<plugin>
+						<groupId>org.jacoco</groupId>
+						<artifactId>jacoco-maven-plugin</artifactId>
+						<version>0.8.11</version>
+						<executions>
+							<execution>
+								<id>prepare-agent</id>
+								<goals>
+									<goal>prepare-agent</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>report</id>
+								<phase>test</phase>
+								<goals>
+									<goal>report</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

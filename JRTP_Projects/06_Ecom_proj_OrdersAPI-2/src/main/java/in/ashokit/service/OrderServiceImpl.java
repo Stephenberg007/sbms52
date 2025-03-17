@@ -81,6 +81,7 @@ public class OrderServiceImpl implements OrderService {
 		// save Order in DB
 		
 		Order order = OrderMapper.dtoToEntity(orderDto);
+		
 		String orderTrackingNum = generateOrderTrackingNum();
 		order.setOrderTrackingNum(orderTrackingNum);
 		
@@ -101,7 +102,8 @@ public class OrderServiceImpl implements OrderService {
 	           orderItem.setQuantity(itemDto.getQuantity());
 	           orderItem.setProdName(itemDto.getProductname());
 	           orderItem.setUnitPrice(itemDto.getUnitPrice());
-	           orderItem.setOrderItemId(itemDto.getOrderItemId());
+	          // orderItem.setOrderItemId(itemDto.getOrderItemId());
+	           orderItem.setOrderItemId(null);
 	           orderItem.setOrder(savedOrder); // Association Mapping
 	            return orderItem;
 	        }).collect(Collectors.toList());

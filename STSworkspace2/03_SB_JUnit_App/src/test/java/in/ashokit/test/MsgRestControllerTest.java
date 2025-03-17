@@ -24,15 +24,15 @@ public class MsgRestControllerTest {
 	//@Autowired-- would have injected A Real Object
 	
 	@MockitoBean	// A mock object would be Inserted Now
-	private MsgService msgService;
+	private MsgService msgService;// if we had used @Autowired then Actual Object wuld hav Inserted
 	
 	@Autowired
 	MockMvc mockMvc;	// will be used to send Get Request to REST API programatically
 	
 	@Test
 	public void getGreetTest() throws Exception{
-		when(msgService.getGreetMsg()).thenReturn("Hey Handsome");// defining mock obj method behaviour
-		
+		when(msgService.getGreetMsg()).thenReturn("Hey Handsome");// defining mock obj ka method behaviour i.e mock Output
+								// actual method call hoga toh 'Good Evening' aaega Output
 		MockHttpServletRequestBuilder reqBuilder = MockMvcRequestBuilders.get("/greet");
 		MvcResult result= mockMvc.perform(reqBuilder).andReturn();// we are sending the request programaticallyashokit
 		
