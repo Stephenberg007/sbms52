@@ -31,7 +31,7 @@ public class MsgServiceTest {
 		MsgService msgServ= new MsgService();
 		 Method method = MsgService.class.getDeclaredMethod("getNewMsg");
 	        method.setAccessible(true); // Bypass private access
-	        String result = (String) method.invoke(msgServ);
+	        String result = (String) method.invoke(msgServ);// it means msgServ.getNewMsg()
 	        assertEquals("Testing Private Method", result);
 		
 	}
@@ -43,7 +43,7 @@ public class MsgServiceTest {
 		MsgService msgServ= new MsgService();
 		 Method method = MsgService.class.getDeclaredMethod("getNewMsg",String.class);
 	        method.setAccessible(true); // Bypass private access
-	        String result = (String) method.invoke(msgServ,"Overloading");
+	        String result = (String) method.invoke(msgServ,"Overloading");// it means msgServ.getNewMsg("Overloading");
 	        assertEquals("Second Test Overloading", result);
 		
 	}
